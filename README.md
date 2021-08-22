@@ -23,4 +23,5 @@ This project was developed by Brian Karu.
 
   One to many relationships between department and users. 
 - 
-2. As a user, I want to see individual users, their details, i.e position in the company, their roles, which department(s) they are associated with etc
+2. As a user, I want to see individual users, their details, i.e. position in the company, their roles, which department(s) they are associated with etc
+3. As a user, I want to see specific information such as the Departments name, description, number of employees in the department.
