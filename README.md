@@ -8,6 +8,8 @@ News-Portal-Java
 ## Author's Information
 This project was developed by Brian Karu.
 
+Click on [Karuu](https://github.com/Karuu-01) to find the link to my Github Site.
+
 ## BDD
 ## User Requirements
 1. As a user, I should be able to create the following objects:-
