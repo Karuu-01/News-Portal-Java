@@ -10,7 +10,7 @@ This project was developed by Brian Karu.
 
 ## BDD
 ## User Requirements
-As a user, I should be able to create the following objects:-
+1. As a user, I should be able to create the following objects:-
 - Departments
 
 - News:
@@ -21,4 +21,6 @@ As a user, I should be able to create the following objects:-
 
 - Users:
 
-  One to many relationships between department and users.
+  One to many relationships between department and users. 
+- 
+2. As a user, I want to see individual users, their details, i.e position in the company, their roles, which department(s) they are associated with etc
