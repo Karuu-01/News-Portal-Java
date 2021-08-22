@@ -41,6 +41,9 @@ Here is a working live demo :
 - Build
 - Run gradle build to build the project.
 
+## Known Bugs
+There are no known bugs at the moment
+
 ## Technologies Used:
 - Java.
 - Spark.
