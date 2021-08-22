@@ -1,0 +1,27 @@
+plugins {
+    id 'java'
+}
+
+group 'news'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+    implementation 'com.sparkjava:spark-core:2.9.3'
+    implementation 'org.postgresql:postgresql:42.2.23'
+    implementation 'postgresql:postgresql:9.1-901-1.jdbc4'
+    implementation 'com.github.jknack:handlebars:4.2.0'
+    implementation 'org.slf4j:slf4j-simple:1.7.32'
+    implementation 'org.sql2o:sql2o:1.6.0'
+
+
+}
+
+test {
+    useJUnitPlatform()
+}
