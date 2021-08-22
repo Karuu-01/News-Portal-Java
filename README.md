@@ -26,3 +26,4 @@ This project was developed by Brian Karu.
 2. As a user, I want to see individual users, their details, i.e. position in the company, their roles, which department(s) they are associated with etc
 3. As a user, I want to see specific information such as the Departments name, description, number of employees in the department.
 4. As a user, I want to see all users from a specific Department, the news relating to that department or a link to a page with said news (for tidiness).
+5. As a user, I want to be able to Post some news relating to a department.
