@@ -1,3 +1,5 @@
+package Models;
+
 import Models.Users;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
@@ -13,6 +15,12 @@ class UsersTest {
 
     @AfterEach
     void tearDown() throws Exception{
+    }
+
+    @Test
+    void GetAllInstances() {
+        Users testUsers = setupUser();
+        assertTrue(testUsers instanceof Users );
     }
 
     @Test
