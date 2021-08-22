@@ -46,6 +46,10 @@ Here is a working live demo :
 - Maven.
 - Bootstrap.
 - JUnit.
+- Postgresql
+- Handlebars Templates
+- JDBC Driver
+- Simple sl4j
 
 ## Contact Information
 - Email : brian.karu.work@gmail.com
