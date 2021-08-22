@@ -1,6 +1,7 @@
 package Models;
 
 public class Users {
+
 private String name;
 private String roles;
 private String departments;

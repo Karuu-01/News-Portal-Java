@@ -1,6 +1,7 @@
 package Models;
 
 public class News {
+
     private String users;
     private String headlines;
 
