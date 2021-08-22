@@ -18,24 +18,71 @@ class NewsTest {
 
     @Test
     void GenerateAllInstancesTrue() {
-        News testNews = setupUser();
+        News testNews = setupNews();
         assertTrue(testNews instanceof News);
     }
 
     @Test
+    void GenerateStringNameInstantiatesCorrectlyTrue() {
+        News testNews = setupNews();
+        assertEquals("BBI", testNews.getName());
+    }
+
+    @Test
+    void setUseridCorrectly() {
+        News testNews = setupNews();
+        testNews.setId(2);
+        assertNotEquals(1, testNews.getId());
+    }
+
+    @Test
     void GenerateUsersInstantiatesWithStringUserAssociatedWithDepartment_true() throws Exception{
-        News testNews = setupUser();
-        assertEquals("Communications Team", testNews.getUsers());
+        News testNews = setupNews();
+        assertEquals("Politics Department", testNews.getUsers());
     }
 
     @Test
     void GenerateNewsRelatingToDepartmentStringInstantiatesTrue() {
-        News testNews = setupUser();
+        News testNews = setupNews();
         assertEquals("BBI decision rejected", testNews.getHeadlines());
     }
 
-    public News setupUser() {
-        return new News("Communications Team", "BBI decision rejected");
+    @Test
+    void GetAuthorInstantiatesCorrectlyWithAuthorString() {
+        News testNews = setupNews();
+        assertEquals("Brian", testNews.getAuthor());
+    }
+
+    @Test
+    void setAuthorNameCorrectly() {
+        News testNews = setupNews();
+        testNews.setAuthor("Rico");
+        assertNotEquals("Brian", testNews.getAuthor());
+    }
+
+    @Test
+    public void setNameSetsCorrectName_String() throws Exception {
+        News testNews = setupNews();
+        testNews.setName("Politics");
+        assertNotEquals("BBI", testNews.getName());
+    }
+
+    @Test
+    public void setHeadlinesSetsCorrectName_String() throws Exception {
+        News testNews = setupNews();
+        testNews.setHeadlines("Breaking bridges initiative");
+        assertNotEquals("BBI decision rejected", testNews.getHeadlines());
+    }
+
+    @Test
+    public void setUsersSetsCorrectName_String() throws Exception {
+        News testNews = setupNews();
+        testNews.setUsers("Politics Team");
+        assertNotEquals("Politics Department", testNews.getUsers());
+    }
+
+    public News setupNews() {
+        return new News("BBI", "Politics Department", "BBI decision rejected", "Brian");
     }
 
 }

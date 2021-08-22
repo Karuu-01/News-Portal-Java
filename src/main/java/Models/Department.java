@@ -3,15 +3,15 @@ package Models;
 import java.util.Objects;
 
 public class Department {
-
+    private int id;
     private String name;
     private String description;
-    private int employeeTag;
+    private String employee;
 
-    public Department(String name, String description, int employeeTag) {
+    public Department(String name, String description, String employee) {
         this.name = name;
         this.description = description;
-        this.employeeTag = employeeTag;
+        this.employee = employee;
     }
 
     public String getName() {
@@ -30,12 +30,20 @@ public class Department {
         this.description = description;
     }
 
-    public int getEmployeeTag() {
-        return employeeTag;
+    public int getId() {
+        return id;
     }
 
-    public void setEmployeeTag(int employeeTag) {
-        this.employeeTag = employeeTag;
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getEmployee() {
+        return employee;
+    }
+
+    public void setEmployee(String employee) {
+        this.employee = employee;
     }
 
     @Override
@@ -43,11 +51,11 @@ public class Department {
         if (this == o) return true;
         if (!(o instanceof Department)) return false;
         Department that = (Department) o;
-        return employeeTag == that.employeeTag && Objects.equals(getName(), that.getName()) && Objects.equals(getDescription(), that.getDescription());
+        return getId() == that.getId() && Objects.equals(getName(), that.getName()) && Objects.equals(getDescription(), that.getDescription()) && Objects.equals(getEmployee(), that.getEmployee());
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(getName(), getDescription(), employeeTag);
+        return Objects.hash(getId(), getName(), getDescription(), getEmployee());
     }
 }
