@@ -54,3 +54,7 @@ Here is a working live demo :
 ## Contact Information
 - Email : brian.karu.work@gmail.com
 - Phone : +254 706844439
+
+
+## License
+[MIT](License) © Brian Karu
