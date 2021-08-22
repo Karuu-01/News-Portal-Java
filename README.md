@@ -38,3 +38,15 @@ Here is a working live demo :
 - Build project
 - Build
 - Run gradle build to build the project.
+
+## Technologies Used:
+- Java.
+- Spark.
+- Gradle.
+- Maven.
+- Bootstrap.
+- JUnit.
+
+## Contact Information
+- Email : brian.karu.work@gmail.com
+- Phone : +254 706844439
