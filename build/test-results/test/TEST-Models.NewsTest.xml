@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Models.NewsTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2021-08-22T13:33:05" hostname="karuu-HP-EliteBook-8470p" time="0.042">
+  <properties/>
+  <testcase name="GenerateUsersInstantiatesWithStringUserAssociatedWithDepartment_true()" classname="Models.NewsTest" time="0.034"/>
+  <testcase name="GenerateAllInstancesTrue()" classname="Models.NewsTest" time="0.002"/>
+  <testcase name="GenerateNewsRelatingToDepartmentStringInstantiatesTrue()" classname="Models.NewsTest" time="0.002"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
