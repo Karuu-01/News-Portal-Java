@@ -33,6 +33,21 @@ Click on [Karuu](https://github.com/Karuu-01) to find the link to my Github Site
 ## Demo
 Here is a working live demo :
 
+## Database Set Up Instructions
+SET MODE PostgreSQL;
+
+CREATE DATABASE news_java;
+\c news_java
+CREATE TABLE IF NOT EXISTS departments (id serial PRIMARY KEY, name VARCHAR, description VARCHAR, employee VARCHAR);
+
+CREATE TABLE IF NOT EXISTS news (id serial PRIMARY KEY, name VARCHAR, users VARCHAR, headlines VARCHAR, author VARCHAR);
+
+CREATE TABLE IF NOT EXISTS users(id serial PRIMARY KEY, name VARCHAR, roles VARCHAR, departments VARCHAR);
+
+CREATE TABLE IF NOT EXISTS department_users(id serial PRIMARY KEY, usersId INTEGER, departmentId INTEGER);
+
+CREATE DATABASE news_test WITH TEMPLATE news_java;
+
 ## To set up this project:
 
 - Clone the repository by executing the following command in your terminal in the directory of your choice - git clone https://github.com/Karuu-01/Models.News-Portal-Java
