@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Dao.Sql2oUsersDaoTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2021-08-23T10:08:46" hostname="karuu-HP-EliteBook-8470p" time="1.294">
+  <properties/>
+  <testcase name="clearAllUsersFromDepartments()" classname="Dao.Sql2oUsersDaoTest" time="0.804"/>
+  <testcase name="getAllUsers()" classname="Dao.Sql2oUsersDaoTest" time="0.225"/>
+  <testcase name="usersIdCorrectly()" classname="Dao.Sql2oUsersDaoTest" time="0.107"/>
+  <testcase name="deleteById()" classname="Dao.Sql2oUsersDaoTest" time="0.154"/>
+  <system-out><![CDATA[clear database
+clear database
+clear database
+clear database
+closed connection
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

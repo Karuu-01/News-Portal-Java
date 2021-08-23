@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Models.NewsTest" tests="10" skipped="0" failures="0" errors="0" timestamp="2021-08-23T10:08:47" hostname="karuu-HP-EliteBook-8470p" time="0.017">
+  <properties/>
+  <testcase name="setNameSetsCorrectName_String()" classname="Models.NewsTest" time="0.002"/>
+  <testcase name="setAuthorNameCorrectly()" classname="Models.NewsTest" time="0.001"/>
+  <testcase name="setUseridCorrectly()" classname="Models.NewsTest" time="0.001"/>
+  <testcase name="GenerateStringNameInstantiatesCorrectlyTrue()" classname="Models.NewsTest" time="0.001"/>
+  <testcase name="GetAuthorInstantiatesCorrectlyWithAuthorString()" classname="Models.NewsTest" time="0.0"/>
+  <testcase name="setHeadlinesSetsCorrectName_String()" classname="Models.NewsTest" time="0.001"/>
+  <testcase name="setUsersSetsCorrectName_String()" classname="Models.NewsTest" time="0.0"/>
+  <testcase name="GenerateUsersInstantiatesWithStringUserAssociatedWithDepartment_true()" classname="Models.NewsTest" time="0.001"/>
+  <testcase name="GenerateAllInstancesTrue()" classname="Models.NewsTest" time="0.001"/>
+  <testcase name="GenerateNewsRelatingToDepartmentStringInstantiatesTrue()" classname="Models.NewsTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

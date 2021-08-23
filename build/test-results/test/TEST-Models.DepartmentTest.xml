@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Models.DepartmentTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2021-08-23T10:08:47" hostname="karuu-HP-EliteBook-8470p" time="0.021">
+  <properties/>
+  <testcase name="GenerateStringThatInstantiatesWithNameCorrectly()" classname="Models.DepartmentTest" time="0.003"/>
+  <testcase name="GenerateTestThatInstantiatesWithAllInstances()" classname="Models.DepartmentTest" time="0.002"/>
+  <testcase name="GetStringOfEmployeesInDepartmentInstantiatesWithStringCorrectly()" classname="Models.DepartmentTest" time="0.002"/>
+  <testcase name="setDepartmentsDescriptionCorrectly()" classname="Models.DepartmentTest" time="0.001"/>
+  <testcase name="GetDescriptionStringInstantiatesCorrectlyWithDescription()" classname="Models.DepartmentTest" time="0.001"/>
+  <testcase name="setEmployeeNameCorrectly()" classname="Models.DepartmentTest" time="0.001"/>
+  <testcase name="setDepartmentIdCorrectly()" classname="Models.DepartmentTest" time="0.002"/>
+  <testcase name="setNameDepartmentCorrectly()" classname="Models.DepartmentTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

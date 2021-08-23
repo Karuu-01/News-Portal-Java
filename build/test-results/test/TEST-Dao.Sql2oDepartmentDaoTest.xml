@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Dao.Sql2oDepartmentDaoTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2021-08-23T10:08:48" hostname="karuu-HP-EliteBook-8470p" time="0.744">
+  <properties/>
+  <testcase name="getAllDepartmentsById()" classname="Dao.Sql2oDepartmentDaoTest" time="0.112"/>
+  <testcase name="IdSetCorrectly()" classname="Dao.Sql2oDepartmentDaoTest" time="0.083"/>
+  <testcase name="deletesByIdTheDepartment()" classname="Dao.Sql2oDepartmentDaoTest" time="0.136"/>
+  <testcase name="removeAllDepartments()" classname="Dao.Sql2oDepartmentDaoTest" time="0.231"/>
+  <testcase name="getsAllDepartmentsStringInstantiatesCorrectly()" classname="Dao.Sql2oDepartmentDaoTest" time="0.179"/>
+  <system-out><![CDATA[closed connection
+closed connection
+closed connection
+closed connection
+closed connection
+database clearance
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
