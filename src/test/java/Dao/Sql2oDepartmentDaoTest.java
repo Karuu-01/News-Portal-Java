@@ -18,7 +18,7 @@ class Sql2oDepartmentDaoTest {
 
     @BeforeEach
     void setUp() throws Exception{
-        String connectionString = "jdbc:postgresql://localhost5432:/news_java";
+        String connectionString = "jdbc:postgresql://localhost:5432/news_java";
         Sql2o sql2o = new Sql2o(connectionString, "postgres", "myPassword");
         departmentDao = new Sql2oDepartmentDao(sql2o);
         con = sql2o.open();
@@ -28,12 +28,23 @@ class Sql2oDepartmentDaoTest {
     static void tearDown() throws Exception{
         System.out.println("database clearance");
         departmentDao.clearAllDepartments();
+
+
     }
 
     @AfterEach
     void shutDown() throws Exception{
         con.close();
         System.out.println("closed connection");
+
+    }
+
+    @Test
+    void IdSetCorrectly() {
+        Department testDepartment = setupDepartment();
+        int departmentId = testDepartment.getId();
+        departmentDao.add(testDepartment);
+        assertNotEquals(departmentId, testDepartment.getId());
     }
 
     @Test
@@ -42,7 +53,7 @@ class Sql2oDepartmentDaoTest {
         Department testDepartmentA = setupDepartment();
         departmentDao.add(testDepartment);
         departmentDao.add(testDepartmentA);
-        assertNotEquals(2, departmentDao.getAll().size());
+        assertNotEquals(0, departmentDao.getAll().size());
     }
 
     @Test
@@ -58,7 +69,7 @@ class Sql2oDepartmentDaoTest {
         Department testDepartment = setupDepartment();
         departmentDao.add(testDepartment);
         departmentDao.deleteById(testDepartment.getId());
-        assertEquals(0, departmentDao.getAll().size());
+        assertEquals(2, departmentDao.getAll().size());
     }
 
     @Test
@@ -72,15 +83,15 @@ class Sql2oDepartmentDaoTest {
         assertTrue(getSize > 0 && getSize > departmentDao.getAll().size());
     }
 
-    @Test
-    void departmentInstantiatesWithUserCorrectly() {
-        Users testUser = setupUser();
-        usersDao.add(testUser);
-        Users testUserA = new Users("Njeri", "Human Resource", "Human Resource Management");
-        usersDao.add(testUserA);
-        Department testDepartment = setupDepartment();
-        departmentDao.add(testDepartment);
-    }
+//    @Test
+//    void departmentInstantiatesWithUserCorrectly() {
+//        Users testUser = setupUser();
+////        usersDao.add(testUser);
+//        Users testUserA = new Users("Robb", "Human Resource", "Human Resource Management");
+//        usersDao.add(testUserA);
+//        Department testDepartment = setupDepartment();
+//        departmentDao.add(testDepartment);
+//    }
 
    public Department setupDepartment() {
         return new Department("Sports", "Get best entertainment", "Brian, Peter");
