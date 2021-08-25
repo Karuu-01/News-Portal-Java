@@ -27,8 +27,8 @@ public class App {
         Gson gson = new Gson();
 
         staticFileLocation("/public");
-        String connectionString = "jdbc:postgresql://localhost:5432/news_java";
-        Sql2o sql2o = new Sql2o(connectionString, "postgres", "myPassword");
+        String connectionString = "jdbc:postgresql://ec2-52-86-2-228.compute-1.amazonaws.com:5432/dbikgoniut6b1v";
+        Sql2o sql2o = new Sql2o(connectionString, "pjvyfidsoyyhvx", "68f89c9557b0c3ef5fc79348fcdd903356b835e9ec642ba9696d4c0508444744");
 
         departmentDao = new Sql2oDepartmentDao(sql2o);
         usersDao = new Sql2oUsersDao(sql2o);
@@ -39,7 +39,7 @@ public class App {
 
         get("/", "application/json", (req, res) -> {
             res.type("application/json");
-            return gson.toJson("Welcome To News-Java-Portal");
+            return gson.toJson(departmentDao.getAll());
         });
 
 
