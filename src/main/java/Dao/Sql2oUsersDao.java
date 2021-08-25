@@ -24,9 +24,12 @@ public class Sql2oUsersDao implements UsersDao{
 
     @Override
     public void add(Users user) {
-        String sql = "INSERT INTO users (name, roles, departments ) VALUES (:name, :roles, :departments)";
+        String sql = "INSERT INTO users (name, roles, departments ) VALUES (:name, :roles, :departments);";
         try(Connection connection = sql2o.open()){
-            int id = (int) connection.createQuery(sql,true).bind(user).executeUpdate().getKey();
+            int id = (int) connection.createQuery(sql,true)
+                    .bind(user)
+                    .executeUpdate()
+                    .getKey();
             user.setId(id);
         } catch (Sql2oException ex) {
             System.out.println(ex);

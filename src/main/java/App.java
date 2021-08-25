@@ -23,7 +23,7 @@ public class App {
         Sql2oDepartmentDao departmentDao;
         Sql2oUsersDao usersDao;
         Sql2oNewsDao newsDao;
-        Connection conn;
+        Connection con;
         Gson gson = new Gson();
 
         staticFileLocation("/public");
@@ -33,15 +33,15 @@ public class App {
         departmentDao = new Sql2oDepartmentDao(sql2o);
         usersDao = new Sql2oUsersDao(sql2o);
         newsDao = new Sql2oNewsDao(sql2o);
-        conn = sql2o.open();
+        con = sql2o.open();
 
-        post("/users/new", "application/json", (req, res) -> {
-            Users testUser = gson.fromJson(req.body(), Users.class);
-            usersDao.add(testUser);
-            res.status(201);
+
+
+        get("/", "application/json", (req, res) -> {
             res.type("application/json");
-            return gson.toJson(testUser);
+            return gson.toJson("Welcome To News-Java-Portal");
         });
+
 
         get("/users", "application/json", (req, res) -> {
             res.type("application/json");
@@ -53,6 +53,14 @@ public class App {
             int usersId = Integer.parseInt(req.params("id"));
             res.type("application/json");
             return gson.toJson(usersDao.findById(usersId));
+        });
+
+        post("/users/new", "application/json", (req, res) -> {
+            Users testUser = gson.fromJson(req.body(), Users.class);
+            usersDao.add(testUser);
+            res.status(201);
+            res.type("application/json");
+            return gson.toJson(testUser);
         });
 
         post("/departments/new", "application/json", (req, res) -> {
@@ -68,7 +76,7 @@ public class App {
             return gson.toJson(departmentDao.getAll());
         });
 
-        get("/Departments/:id", "application/json", (req, res) -> {
+        get("/departments/:id", "application/json", (req, res) -> {
             res.type("application/json");
             int departmentId = Integer.parseInt(req.params("id"));
             res.type("application/json");
