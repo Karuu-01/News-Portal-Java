@@ -1,0 +1,10 @@
+Models/Department.class
+Dao/Sql2oNewsDao.class
+Dao/Sql2oUsersDao.class
+Models/News.class
+Dao/UsersDao.class
+App.class
+Dao/NewsDao.class
+Dao/Sql2oDepartmentDao.class
+Dao/DepartmentDao.class
+Models/Users.class
